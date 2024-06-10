@@ -7,6 +7,7 @@
     padding: 20px;
     margin-bottom: 20px;
     background-color: #fff;
+    margin-left: 20px;
 }
 
 .collector-img {

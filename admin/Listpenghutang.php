@@ -37,7 +37,7 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'listhutang';
             <nav>
                 <ul>
                     <li><a href="?page=listhutang" class="<?php echo $activePage == 'listhutang' ? 'active' : ''; ?>"><img src="../img/currency_exchange.svg" class="icon" alt="Ajukan Peminjaman Icon">List Penghutang</a></li>
-                    <li><a href="?page=list-hutang" class="<?php echo $activePage == 'totalpinjaman' ? 'active' : ''; ?>"><img src="../img/checkbook.png" alt="List Hutang Icon"> Total Pinjaman</a></li>
+                    <li><a href="?page=totalpinjaman" class="<?php echo $activePage == 'totalpinjaman' ? 'active' : ''; ?>"><img src="../img/checkbook.png" alt="List Hutang Icon"> Total Pinjaman</a></li>
                     <li><a href="?page=debtcol" class="<?php echo $activePage == 'debtcol' ? 'active' : ''; ?>"><img src="../img/payments.png" alt="Pembayaran Icon"> Debt Collector</a></li>
                 </ul>
             </nav>
@@ -87,7 +87,7 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'listhutang';
                 </div>
             </div>
             <div id="totalpinjaman" class="content-section <?php echo $activePage == 'totalpinjaman' ? 'active' : ''; ?>">
-                <?php include 'Listpenghutang.php'; ?>
+                <?php include 'totalpinjaman.php'; ?>
             </div>
             <div id="debtcol" class="content-section <?php echo $activePage == 'debtcol' ? 'active' : ''; ?>">
                 <?php include 'debtcol.php'; ?>
@@ -95,13 +95,6 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'listhutang';
         </div>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const currentSection = document.querySelector('.content-section.active');
-            if (currentSection) {
-                currentSection.style.display = 'block';
-            }
-        });
-
         document.querySelectorAll('.sidebar nav ul li a').forEach(link => {
             link.addEventListener('click', function(event) {
                 event.preventDefault();
@@ -110,7 +103,7 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'listhutang';
                 const targetSection = document.getElementById(targetPage);
 
                 if (currentSection !== targetSection) {
-                    currentSection.classList.remove('active');
+                    currentSection.classList.remove('active');  
                     currentSection.classList.add('fade-out');
                     setTimeout(() => {
                         currentSection.classList.remove('fade-out');
