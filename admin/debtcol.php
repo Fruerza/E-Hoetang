@@ -1,3 +1,4 @@
+
 <head>
     <style>
 .debt-collector-item {
@@ -5,9 +6,11 @@
     align-items: center;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     background-color: #fff;
-    margin-left: 20px;
+    margin-left: 0px;
+    width: 100%;
+    margin: 10px;
 }
 
 .collector-img {
@@ -16,6 +19,28 @@
     border-radius: 10%;
     object-fit: cover;
     margin-right: 20px;
+}
+
+.tambah {
+    background-color: #4A52F7;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 1200px;
+}
+
+.tambah a {
+    color: white;
+}
+
+.tambah:hover{
+    background-color: #3a42d7;
 }
 
 .collector-details {
@@ -41,11 +66,16 @@
 .deactivate-button:hover {
     background-color: #e60000;
 }
+
+.debtcol h2 {
+    margin-left: 60px;
+}
     </style>
 </head>
 
 <div class="debtcol" id="list-debt-collector">
     <h2>List Debt Collector</h2>
+    <button class="tambah"><a href="formdebtcol.php">Tambahkan</a></button>
     <div class="debt-collector-item">
         <input type="file" id="profile-img1" class="profile-input" accept="image/*">
         <div class="collector-details">

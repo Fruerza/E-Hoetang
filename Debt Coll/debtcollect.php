@@ -1,5 +1,5 @@
 <?php
-$activePage = isset($_GET['page']) ? $_GET['page'] : 'listhutang';
+$activePage = isset($_GET['page']) ? $_GET['page'] : 'debtcollect';
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +36,8 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'listhutang';
             </div>
             <nav>
                 <ul>
-                    <li><a href="?page=listhutang" class="<?php echo $activePage == 'listhutang' ? 'active' : ''; ?>"><img src="../img/currency_exchange.svg" class="icon" alt="Ajukan Peminjaman Icon">List Penghutang</a></li>
-                    <li><a href="?page=totalpinjaman" class="<?php echo $activePage == 'totalpinjaman' ? 'active' : ''; ?>"><img src="../img/checkbook.png" alt="List Hutang Icon"> Total Pinjaman</a></li>
-                    <li><a href="?page=debtcol" class="<?php echo $activePage == 'debtcol' ? 'active' : ''; ?>"><img src="../img/payments.png" alt="Pembayaran Icon"> Debt Collector</a></li>
+                    <li><a href="?page=debtcollect" class="<?php echo $activePage == 'debtcollect' ? 'active' : ''; ?>"><img src="../img/eye_tracking.png" class="icon" alt="Ajukan Peminjaman Icon">Target Sasaran</a></li>
+                    <li><a href="?page=biodata" class="<?php echo $activePage == 'biodata' ? 'active' : ''; ?>"><img src="../img/settings_account_box.png" alt="List Hutang Icon"> Akun</a></li>
                 </ul>
             </nav>
             <div class="logout">
@@ -50,13 +49,8 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'listhutang';
                 <div class="welcome">
                 </div>
             </div>
-            <div id="listhutang" class="content-section <?php echo $activePage == 'listhutang' ? 'active' : ''; ?>">
-                <h2>List Penghutang</h2>
-                <div class="button-group">
-                    <button class="button">Semua Penghutang</button>
-                    <button class="button">Lunas</button>
-                    <button class="button">Belum Dibayar</button>
-                </div>
+            <div id="debtcollect" class="content-section <?php echo $activePage == 'debtcollect' ? 'active' : ''; ?>">
+                <h2>List Target Bulan Ini</h2>
                 <div class="penghutang-list">
                     <div class="penghutang-item">
                         <input type="file" id="profile-img1" class="profile-input" accept="image/*">
@@ -69,7 +63,7 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'listhutang';
                         <div class="credit-score">
                             <div class="kredit">Kredit Score</div>
                             <div class="score">70%</div>
-                            <button class="status-button">Lunas</button>
+                            <button class="status-button">Tagih Sekarang</button>
                         </div>
                     </div>
                     <div class="penghutang-item">
@@ -83,16 +77,13 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'listhutang';
                         <div class="credit-score">
                             <div class="kredit">Kredit Score</div>
                             <div class="score">40%</div>
-                            <button class="status-button">Belum Dibayar</button>
+                            <button class="status-button">Tagih Sekarang</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="totalpinjaman" class="content-section <?php echo $activePage == 'totalpinjaman' ? 'active' : ''; ?>">
-                <?php include 'totalpinjaman.php'; ?>
-            </div>
-            <div id="debtcol" class="content-section <?php echo $activePage == 'debtcol' ? 'active' : ''; ?>">
-                <?php include 'debtcol.php'; ?>
+            <div id="biodata" class="content-section <?php echo $activePage == 'biodata' ? 'active' : ''; ?>">
+                <?php include 'biodata.php'; ?>
             </div>
         </div>
     </div>
