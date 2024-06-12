@@ -6,7 +6,7 @@
     <div class="desc">
         <h2>Lakukan Pembayaran Hari Ini, dan Rasakan Bebas dari Stres Esok Hari</h2>
         <p>Bayar Sekarang, Nikmati Hidup Tenang</p>
-        <button id="bayarSekarang">Bayar Sekarang</button>
+        <a href="<?= urlpath('dashboard/tagihan'); ?>"><button id="bayarSekarang">Bayar Sekarang</button></a>
     </div>
 </section>
 

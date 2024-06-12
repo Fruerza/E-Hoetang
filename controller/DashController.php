@@ -25,5 +25,14 @@ class DashboardController {
                 
             }
     }
+    static function ajukan(){
+        view('user/Ppinjaman2', ['url' => 'home']);
+    }
+    static function tagihan(){
+        view('user/Tpinjaman1', ['url' => 'home']);
+    }
+    static function bayar(){
+        view('user/Tpinjaman2', ['url' => 'home']);
+    }
 }
 ?>

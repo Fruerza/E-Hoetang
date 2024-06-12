@@ -76,7 +76,7 @@ button[type="submit"]:hover {
             </div>
             <div class="form-group">
                 <label for="jangka-waktu">Jangka Waktu Pinjaman</label>
-                <input type="text" id="jangka-waktu" name="jangka-waktu">
+                <input type="date" id="jangka-waktu" name="jangka-waktu">
             </div>
             <div class="form-group">
                 <label for="tujuan">Tujuan Pinjaman</label>

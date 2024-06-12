@@ -18,7 +18,7 @@
         </div>
 </div>
 <div class="loan-history">
-<div class="tabel">
+<!-- <div class="tabel">
         <table cellspacing="0">
             <tr>
                 <th>No.</th>
@@ -51,7 +51,7 @@
             <?php endforeach ?>
 
         </table>
-    </div>
+    </div> -->
 
 
     <div class="loan-item">

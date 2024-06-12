@@ -101,7 +101,7 @@
             <p>Total Harga</p>
             <p>Rp. 5.075.000,00</p>
         </div>
-        <a href="Tpinjaman2.php"><button class="pay-button">Bayar Sekarang</button></a>
+        <a href="<?= urlpath('dashboard/bayar'); ?>"><button class="pay-button">Bayar Sekarang</button></a>
     </div>
 </section>
 </body>

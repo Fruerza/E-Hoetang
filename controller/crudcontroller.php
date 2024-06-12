@@ -4,42 +4,40 @@ include 'model/crudmodel.php';
 
 class TransaksiController
 {
-    static function detailTransaksi() {
-        if (!isset($_SESSION['user'])) {
-            header('Location: '.BASEURL.'auth?auth=false');
-            exit;
-        } else {
-            if ($_SESSION['user']['role'] === 'renter') {
-                view('renter/layout', [
-                    'url' => 'detail_pesanan',
-                    'transaksi' => Transaksi::selectTransaksiUser($_SESSION['user']['username'], )
-                ]);
-            } else {
-                header('Location: '.BASEURL.'auth?auth=false');
-                exit;
-            }
-        }
-    }
+    // static function detailTransaksi() {
+    //     if (!isset($_SESSION['user'])) {
+    //         header('Location: '.BASEURL.'auth?auth=false');
+    //         exit;
+    //     } else {
+    //         if ($_SESSION['user']['role'] === 'renter') {
+    //             view('renter/layout', [
+    //                 'url' => 'detail_pesanan',
+    //                 'transaksi' => Transaksi::selectTransaksiUser($_SESSION['user']['username'], )
+    //             ]);
+    //         } else {
+    //             header('Location: '.BASEURL.'auth?auth=false');
+    //             exit;
+    //         }
+    //     }
+    // }
 
-    static function add()
+    static function edit()
     {
-        if (!isset($_SESSION['user'])) {
+        if (!isset($_SESSION['debtcollector'])) {
             header('Location: ' . BASEURL . 'auth?auth=false');
             exit;
         } else {
-            if ($_SESSION['user']['role'] === 'renter') {
+            if ($_SESSION['user']['role'] === 'debtcollector') {
                 $post = array_map('htmlspecialchars', $_POST);
-                view('renter/layout', [
+                view('DebtColl/layout', [
                     'url' => 'add',
-                    'gedung' => $post['gedung'],
-                    'lapangan' => Gedung::selectLapangan($post['slug']),
-                    'transaksi' => Transaksi::selectTransaksiGedung($post['slug']),
-                    'tanggal' => $post['tanggal'],
-                    'an_rek' => $post['an_rek'],
-                    'no_rek' => $post['no_rek'],
-                    'harga_lapangan' => $post['harga_lapangan'],
-                    'nomor_telepon' => $post['nomor_telepon'],
-                    'jam' => Gedung::selectJam()
+                    'nama' => $post['nama'],
+                    'tgl' => $post['tgl'],
+                    'jkl' => $post['jkl'],
+                    'nik' => $post['nik'],
+                    'email' => $post['email'],
+                    'nohp' => $post['nohp'],
+                    'alamat' => $post['alamat']
                 ]);
             } else {
                 header('Location: '.BASEURL.'auth?auth=false');
@@ -48,26 +46,26 @@ class TransaksiController
         }
     }
 
-    static function saveAdd()
+    static function saveedit()
     {
         if (!isset($_SESSION['user'])) {
             header('Location: ' . BASEURL . 'auth?auth=false');
             exit;
         } else {
-            $bukti_transfer = Transaksi::upload(); 
-            if (!$bukti_transfer) {
+            $foto = UserModel::uploadFile(); 
+            if (!$foto) {
                 return false; 
             }
-            foreach ($_POST['pilihJamLap'] as $a) {
-                $pieces = explode("_", $a);
-                $idJam = $pieces[0];
-                $idDetail = $pieces[1];
-                $transaksi = Transaksi::create([
-                    'detail_id' => $idDetail,
-                    'jam_id' => $idJam,
-                    'user_id' => $_SESSION['user']['id_user'],
-                    'tanggal' => $_POST['tanggal'],
-                    'bukti_transfer' => $bukti_transfer, 
+            else if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                $edit = DebtModel::updateDebt([
+                    'nama' => $post['nama'],
+                    'tgl' => $post['tgl'],
+                    'jkl' => $post['jkl'],
+                    'nik' => $post['nik'],
+                    'email' => $post['email'],
+                    'nohp' => $post['nohp'],
+                    'alamat' => $post['alamat'],
+                    'foto' => $foto 
                 ]);
             }
             echo "<script>
@@ -76,16 +74,8 @@ class TransaksiController
         </script>";
         }
     }
+    static function read(){
+
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
 ?>

@@ -1,5 +1,4 @@
 <style>
-        /* styles.css */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -8,8 +7,11 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-image: url("view/img/Background.svg");
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    background-position-x: 600px;
 }
-
 .login-container {
     background-color: #ffffff;
     border-radius: 8px;

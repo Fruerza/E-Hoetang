@@ -654,8 +654,7 @@
             </div>
             <nav>
                 <ul>
-                    
-                    <li><a href="?page=ppinjaman" class="<?php echo $activePage == 'ppinjaman' ? 'active' : ''; ?>"><img src="view/img/currency_exchange.svg" class="icon" alt="Ajukan Peminjaman Icon"> Ajukan Peminjaman</a></li>
+                <li><a href="?page=ppinjaman" class="<?php echo $activePage == 'ppinjaman' ? 'active' : ''; ?>"><img src="view/img/currency_exchange.svg" class="icon" alt="Ajukan Peminjaman Icon">Ajukan Peminjaman</a></li>
                     <li><a href="?page=list-hutang" class="<?php echo $activePage == 'list-hutang' ? 'active' : ''; ?>"><img src="view/img/checkbook.png" alt="List Hutang Icon"> List Hutang</a></li>
                     <li><a href="?page=pembayaran" class="<?php echo $activePage == 'pembayaran' ? 'active' : ''; ?>"><img src="view/img/payments.png" alt="Pembayaran Icon"> Pembayaran</a></li>
                     <li><a href="?page=akun" class="<?php echo $activePage == 'akun' ? 'active' : ''; ?>"><img src="view/img/settings_account_box.png" alt="Akun Icon"> Akun</a></li>
@@ -679,7 +678,7 @@
                         <h2>Pinjaman Mudah dan Cepat Hanya di E-Hoetang</h2>
                         <p>Memberdayakan Mimpi Anda, Satu Pinjaman pada Satu Waktu</p>
                         <div class="apply-button">
-                            <a href="Ppinjaman2.php">Ajukan Peminjaman</a>
+                            <a href="<?= urlpath('dashboard/ajukanpeminjaman'); ?>">Ajukan Peminjaman</a>
                         </div>
                     </div>
                 </div>

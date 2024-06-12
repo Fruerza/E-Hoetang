@@ -17,6 +17,12 @@
 
 
 <style>
+    body{
+    background-image: url("view/img/Background.svg");
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    background-position-x: 600px;
+    }
     .register-container {
         background-color: white;
         padding: 20px;
@@ -35,7 +41,7 @@
     .register-container input[type="text"],
     .register-container input[type="email"],
     .register-container input[type="password"] {
-        width: 100%;
+        width: 95%;
         padding: 10px;
         margin: 10px 0;
         border: 1px solid #ccc;

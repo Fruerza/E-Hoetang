@@ -188,7 +188,7 @@
         <div class="popup-content">
             <h1>Apakah Anda Yakin Menagihnya Sekarang?</h1>
             <div class="image-container">
-                <img src="../img/confussion 1.png" alt="Illustrasi Pertanyaan">
+                <img src="view/img/confussion 1.png" alt="Illustrasi Pertanyaan">
             </div>
             <div class="button-container">
                 <button class="button confirm">Tagih Sekarang</button>
