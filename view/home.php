@@ -1,23 +1,12 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Hoetang</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="img/E-Hoetang 1.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
-</head>
+<?php ob_get_clean(); ?>
+<?php $title = 'E-HOETANG'; ?>
+<?php $style = 'style.css'; ?>
+<?php $body = ob_get_clean(); ?>
+<?php include 'master.php'; ?>
+<?php include 'header.php'?>
 <body>
-    <header class="header">
+<header class="header">
         <div class="container">
-            <div class="logo">
-              <img src="img/E-Hoetang 1.png" alt="" class="logo-image">
-              <span class="logo-text">E-Hoetang</span>
-            </div>
             <div class="display-text">
                 <div class="sub-content">
                   <div class="bersama-menuju-kesuksesan-finansial">
@@ -29,31 +18,29 @@
                 </div>
                 <div class="button">
                     <div class="button2">
-                        <button class="mulai"><a href="view_homepage/register.php">Mulai</button></a>
+                        <button class="mulai"><a href="<?= urlpath('register'); ?>">Mulai</button></a>
                     </div>
                 </div>
             </div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#beranda">Beranda</a></li>
-                    <li><a href="#tentang">Tentang</a></li>
-                    <li><a href="#testimoni">Testimoni</a></li>
-                </ul>
-            </nav>
-            <button type="bttn"><a href="view_homepage/login.php">Sign In</button></a>
-
         </div>
     </header>
 
 
+
+
+
+
+
+
+    
     <?php
-    include 'view_homepage/section.php';
-    include 'view_homepage/testimoni1.php';
+    include 'section.php';
+    include 'testimoni1.php';
     ?>
 
 <footer class="footer">
     <div class="left">
-        <img src="img/E-Hoetang 1.png" alt="E-Hoetang Logo">
+        <img src="view/img/E-Hoetang 1.png" alt="E-Hoetang Logo">
         <div>
             <div style="font-size: 18px; font-weight: bold; color: #0000ee;">E-Hoetang</div>
             <div style="font-size: 12px;">© 2024 Dibuat dengan Cinta dan Perjuangan - Faris Titik Kumpul</div>
@@ -68,10 +55,6 @@
     </div>
 </footer>
 
-<script src="javascript/sectionview.js"></script>
+<script src="view/javascript/sectionview.js"></script>
 </body>
 </html>
-
-
-
-

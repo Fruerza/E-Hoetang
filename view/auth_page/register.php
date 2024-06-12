@@ -1,27 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Hoetang</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="../img/E-Hoetang 1.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
-</head>
-
 <body>
+<form method="POST" action="<?= urlpath('daftar') ?>" id="signup-form" class="form">
 <div class="register-container">
     <h2>Buat Akun</h2>
-    <input type="text" placeholder="Nama Lengkap">
-    <input type="text" placeholder="Username">
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
+    <input name = 'nama' id = 'nama' type="text" placeholder="Nama Lengkap">
+    <input name = 'nik' id = 'nik' type="text" placeholder="NIK">
+    <input name = 'notelp' id = 'notelp' type="text" placeholder="No Telepon">
+    <input name = 'email' id = 'email' type="email" placeholder="Email">
+    <input name = 'passwd' id = 'passwd' type="password" placeholder="Password">
     <button>Buat Akun</button>
     <div class="login-link">
-        Sudah Punya Akun? <a href="login.php">Log In</a>
+        Sudah Punya Akun? <a href="<?= urlpath('login'); ?>">Log In</a>
     </div>
 </div>
+</form>
 </body>
 
 

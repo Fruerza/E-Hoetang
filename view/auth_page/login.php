@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Hoetang</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="../img/E-Hoetang 1.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <style>
+<style>
         /* styles.css */
 body {
     font-family: Arial, sans-serif;
@@ -96,11 +86,11 @@ input[type="password"]:focus {
     </style>
 </head>
 <body>
+    <form method="POST" action="<?= urlpath('masuk') ?>" id="login-form" class="form">    
     <div class="login-container">
         <div class="login-box">
             <h2>Masuk</h2>
-            <form>
-                <div class="input-group">
+            <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" required>
                 </div>
@@ -108,12 +98,12 @@ input[type="password"]:focus {
                     <label for="password">Password</label>
                     <input type="password" id="password" required>
                 </div>
-                <button type="submit" class="btn">Buat Akun</button>
-            </form>
-            <div class="footer">
-                <span>Tidak Punya Akun? <a href="register.php">Daftar</a></span>
+                <button type="submit" class="btn">Masuk</button>
+                <div class="footer">
+                    <span>Tidak Punya Akun? <a href="<?= urlpath('register'); ?>">Daftar</a></span>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>

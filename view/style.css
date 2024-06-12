@@ -8,18 +8,24 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+    background-image: url("img/Background.svg");
+  background-size: 80% auto;
+  background-repeat: no-repeat;
+  background-position-x: 400px;
 }
 
 .container {
-  width: 80%;
+  width: 100%;
+  margin-top: 200px;
   margin: 0 auto;
+  height: 90vh;
 }
 
 .header {
   padding: 250px 10px;
   margin-bottom: 150px;
   background-image: url("img/Background.svg");
-  background-size: 100% auto;
+  background-size: 80% auto;
   background-repeat: no-repeat;
   background-position-x: 400px;
 }
@@ -33,24 +39,21 @@ body {
   gap: 185px;
 }
 
-.header .container .display-text {
-  margin-left: -137px;
-}
-
-.header .container .nav-menu {
-  margin-left: 600px;
-  margin-top: -680px;
+.pala{
+  position: fixed;
+  z-index: 4;
 }
 
 .nav-menu {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(205, 200, 200, 0.655);
   border-radius: 30px;
   padding: 10px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-right: -1000px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.343);
+  margin-left: 90vh;
 }
 
 .nav-menu ul {
+  margin-left: 100px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -59,7 +62,9 @@ body {
 }
 
 .nav-menu ul li {
+  margin-left: 100px;
   margin: 0 15px;
+  display: flex;
 }
 
 .nav-menu ul li a {
@@ -72,14 +77,16 @@ body {
 }
 
 .nav-menu ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(82, 54, 255, 0.2);;
   border-radius: 20px;
+  padding: 10px 20px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  margin-left: -150px;
+  justify-content: center;
+  margin-left: 10px;
 }
 
 .logo-text {
@@ -155,6 +162,25 @@ body {
   position: relative;
 }
 
+.buttonlogin {
+  margin-left: 100px;
+}
+.buttonlogin button{
+  background: #ffffff; 
+  color: #242331;
+  font-family: "Nunito-Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 25px 5px;
+  border: none;
+  border-radius: 39px;
+  cursor: pointer;
+  transition: background 0.3s;
+  gap: 10px;
+  width: 150px;
+}
+
 .button2 {
   background: rgba(82, 54, 255, 0.9); 
   border-radius: 39px;
@@ -188,24 +214,7 @@ body {
   font-size: 1.2em;
 }
 
-button[type="bttn"] {
-  background: #ffffff; 
-  color: #242331;
-  font-family: "Nunito-Bold", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 25px 5px;
-  border: none;
-  border-radius: 39px;
-  cursor: pointer;
-  transition: background 0.3s;
-  margin-top: -255px;
-  margin-left: 1150px;
-  gap: 10px;
-  width: 150px;
-}
-
-button[type="bttn"]:hover {
+.buttonlogin button:hover {
   background: rgba(82, 54, 255, 0.2);
 }
 
