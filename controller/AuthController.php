@@ -16,17 +16,17 @@ class AuthController {
 
         // Attempt to log in the user
         $user = User::login([
-            'email' => $post['username'], 
+            'email' => $post['email'], 
             'password' => $post['password']
         ]);
-
+        // var_dump($user);
         if ($user) {
             // Store user information in session, excluding sensitive data like password
             unset($user['password']);  // Assuming the password column is called 'password'
             $_SESSION['user'] = $user;
             header('Location: '.BASEURL.'dashboard');
         } else {
-            header('Location: '.BASEURL.'auth?failed=true');
+            header('Location: '.BASEURL.'login');
         }
         exit();  // Ensure no further code is executed after redirection
     }
@@ -91,3 +91,4 @@ class AuthController {
     }
 }
 ?>
+ 

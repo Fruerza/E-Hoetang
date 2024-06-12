@@ -92,11 +92,11 @@ input[type="password"]:focus {
             <h2>Masuk</h2>
             <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" required>
+                    <input name="email" type="email" id="email" required>
                 </div>
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" required>
+                    <input name="password" type="password" id="password" required>
                 </div>
                 <button type="submit" class="btn">Masuk</button>
                 <div class="footer">

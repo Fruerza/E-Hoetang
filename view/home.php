@@ -3,7 +3,8 @@
 <?php $style = 'style.css'; ?>
 <?php $body = ob_get_clean(); ?>
 <?php include 'master.php'; ?>
-<?php include 'header.php'?>
+<?php include 'header.php';
+?>
 <body>
 <header class="header">
         <div class="container">
@@ -32,7 +33,7 @@
 
 
 
-    
+
     <?php
     include 'section.php';
     include 'testimoni1.php';

@@ -1,11 +1,10 @@
 <?php 
     $title = 'E-HOETANG | Debt Collector';
 ?>
-<?php $activePage = isset($_GET['page']) ? $_GET['page'] : 'listhutang';
-?>
+
 <?php
     ob_start();
-    include 'view/admin/style.css';
+    include 'user/user.css';
     $style = ob_get_clean();
 ?>
 

@@ -1,14 +1,3 @@
-<?php
-$activePage = isset($_GET['page']) ? $_GET['page'] : 'ppinjaman';
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Hoetang</title>
-    <link rel="stylesheet" type="text/css" href="user.css">
     <style>
         .content-section {
             display: none;
@@ -43,7 +32,7 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'ppinjaman';
                 </ul>
             </nav>
             <div class="logout">
-                <a href="#logout"><img src="../img/move_item.png" alt="Logout Icon">Log Out</a>
+                <a href="<?= urlpath('dashboard/logout'); ?>"><img src="../img/move_item.png" alt="Logout Icon">Log Out</a>
             </div>
         </div>
         <div class="main-content">

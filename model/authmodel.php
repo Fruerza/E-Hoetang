@@ -18,7 +18,7 @@ class User {
         $result = $stmt->get_result();
         if ($result && $row = $result->fetch_assoc()) {
             // Verify the password using password_verify
-            if (password_verify($password, $row['password'])) {  // Assuming the password column is named 'password'
+            if ($password == $row['pw']) {  // Assuming the password column is named 'password'
                 return $row;
             }
         }

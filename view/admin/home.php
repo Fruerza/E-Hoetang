@@ -22,7 +22,7 @@
     <div class="container">
         <div class="sidebar">
             <div class="logo">
-                <img class="e-hoetang-1" src="../img/E-Hoetang 1.png" />
+                <img class="e-hoetang-1" src="view/img/E-Hoetang 1.png" />
                 <div class="e-hoetang">E-Hoetang</div>
             </div>
             <nav>
@@ -33,7 +33,7 @@
                 </ul>
             </nav>
             <div class="logout">
-                <a href="#logout"><img src="../img/move_item.png" alt="Logout Icon">Log Out</a>
+                <a href="<?= urlpath('dashboard/logout'); ?>><img src="view/img/move_item.png" alt="Logout Icon">Log Out</a>
             </div>
         </div>
         <div class="main-content">

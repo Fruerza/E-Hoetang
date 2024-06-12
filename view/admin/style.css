@@ -52,6 +52,7 @@ body {
 nav {
     position: relative;
     width: 100%;
+    background-color: #3d64fd;
 }
 
 nav ul {
