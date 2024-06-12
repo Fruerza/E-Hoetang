@@ -17,6 +17,7 @@
             <button>Belum Dibayar</button>
         </div>
 </div>
+<div class="loan-history">
 <div class="tabel">
         <table cellspacing="0">
             <tr>
@@ -52,7 +53,7 @@
         </table>
     </div>
 
-<div class="loan-history">
+
     <div class="loan-item">
         <div class="loan-details">
             <div class="loan-date">Jangka Waktu Pinjaman: 29 Mei 2024</div>
