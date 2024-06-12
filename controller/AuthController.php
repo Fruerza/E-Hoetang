@@ -80,7 +80,7 @@ class AuthController {
                 view('admin/layout', ['url' => 'home']);
             } elseif ($user['role'] == 'user') {
                 view('user/layout', ['url' => 'home']);
-            } elseif ($user['role'] == 'debtcollector') {
+            } elseif ($user['role'] == 'c') {
                 view('DebtColl/layout', ['url' => 'home']);
             } else {
                 redirect('login');

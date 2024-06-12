@@ -1,7 +1,9 @@
 <?php 
     $title = 'E-HOETANG | Debt Collector';
 ?>
-
+<?php
+$activePage = isset($_GET['page']) ? $_GET['page'] : 'ppinjaman';
+?>
 <?php
     ob_start();
     include 'user/user.css';

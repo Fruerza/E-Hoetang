@@ -17,14 +17,13 @@ class DashboardController {
                     view('user/layout', [
                         'url' => 'home',
                     ]);
-                } elseif ($_SESSION['user']['role'] === 'dc') {
-                    view('dc/layout', [
+                } elseif ($_SESSION['user']['role'] === 'debtcollector') {
+                    view('DebtColl/layout', [
                         'url' => 'home'
                     ]);
                 }
                 
             }
-
     }
 }
 ?>

@@ -15,27 +15,27 @@
     
     <div class="profile-container">
         <div class="profile-details">
-            <h3>Ubah Biodata Diri</h3>
+               <h3>Ubah Biodata Diri</h3>
             <div class="profile-item">
                 <label for="nama">Nama</label>
-                <input type="text" id="nama">
+                <input name = 'nama' type="text" id="nama">
             </div>
             <div class="profile-item">
                 <label for="tgl_lahir">Tanggal Lahir</label>
-                <input type="text" id="tgl_lahir">
+                <input name = 'tgl' type="text" id="tgl_lahir">
             </div>
             <div class="profile-item">
                 <label for="jenis_kelamin">Jenis Kelamin</label>
-                <input type="text" id="jenis_kelamin">
+                <input name = 'jkl' type="text" id="jenis_kelamin">
             </div>
             <h3>Ubah Kontak</h3>
             <div class="profile-item">
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input name = 'email' type="email" id="email">
             </div>
             <div class="profile-item">
                 <label for="nomor_hp">Nomor HP</label>
-                <input type="tel" id="nomor_hp">
+                <input name = 'nohp' type="tel" id="nomor_hp">
             </div>
         </div>
     </div>

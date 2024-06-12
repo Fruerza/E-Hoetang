@@ -2,8 +2,8 @@
 // Include necessary files
 include_once 'config/static.php';
 include_once 'controller/main.php';
-include_once 'controller/Authcontroller.php';  // Make sure AuthController is included
-include_once 'controller/Dashcontroller.php';  // Make sure DashboardController is included
+include_once 'controller/Authcontroller.php';  
+include_once 'controller/Dashcontroller.php';  
 include_once 'function/main.php';
 
 // Define your routes

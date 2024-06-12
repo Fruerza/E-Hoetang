@@ -27,16 +27,26 @@ class User {
 
     static function register($data) {
         global $conn;
-
-        $email = strtolower($data['email']);
-        $password = password_hash($data['password'], PASSWORD_DEFAULT);  // Hash the password
-        $nama = strtolower($data['nama']);
-        $nik = $data['nik'];
-        $notelp = $data['notelp'];
+        $sql = "SELECT * FROM pelanggan WHERE username = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $data = array();
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        $stmt->close();
+        return $data;
 
         // Prepare the statement to prevent SQL injection
-        $stmt = $conn->prepare("INSERT INTO akun (email, password, nama, nik, notelp) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param('sssss', $email, $password, $nama, $nik, $notelp);
+        $stmt = $conn->prepare("INSERT ALL
+        INSERT INTO `akun`(`email`, `pw`, `role`) VALUES ('?','?','user')
+        INSERT INTO `pelanggan`(`nama`, `nohp`, `nik`) VALUES ('?','?','?')
+        SELECT 1 FROM dual;");
+        $stmt->bind_param('ssssi', $email, $password, $nama, $notelp, $nik);
         
         $stmt->execute();
         
